@@ -1,7 +1,10 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "fs": "^0.0.1-security",
+    "nanoid": "^5.1.0",
     "qrcode": "^1.5.4"
   },
   "type": "module",

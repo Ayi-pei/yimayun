@@ -3,6 +3,8 @@ import fs from 'fs';
 import path from 'path';
 import QRCode from 'qrcode';
 import { nanoid } from 'nanoid';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 app.use(express.json());
