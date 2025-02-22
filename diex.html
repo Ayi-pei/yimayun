@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>二维码短链接</title>
+</head>
+<body>
+  <button type="button" onclick="createShortUrl()">生成短链接和二维码</button>
+  <p>短链接: <a id="shortLink" href="#" target="_blank" title="点击访问生成的短链接"></a></p>
+  <img id="qrCode" src="" alt="二维码">
+
+  <script>
+    async function createShortUrl() {
+      const response = await fetch('http://localhost:3000/create-short-url', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ targetUrl: 'https://example.com' })
+      });
+      const data = await response.json();
+      document.getElementById('shortLink').href = data.shortUrl;
+      document.getElementById('shortLink').innerText = data.shortUrl;
+      document.getElementById('qrCode').src = data.qrCodeDataUrl;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "qrcode": "^1.5.4"
+  },
+  "type": "module",
+  "name": "yimayun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "qr_code_manager.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
